@@ -1,0 +1,213 @@
+/* ============================================
+   COMPLEMENTOS AO TAILWIND - APENAS O NECESSÁRIO
+   ============================================ */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Nav link hover effect */
+.nav-link {
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #6b2bf5;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Tech badges */
+.tech-badge {
+    background: rgba(168, 85, 247, 0.226);
+    color: #94a3b8;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(112, 11, 245, 0.3);
+    transition: all 0.3s ease;
+}
+
+.tech-badge:hover {
+    background: #6b2bf5;
+    color: #0f172a;
+    transform: scale(1.05);
+}
+
+/* Skill tags */
+.skill-tag {
+    background: rgba(11, 210, 245, 0.096);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    border: 1px solid rgba(93, 11, 245, 0.411);
+    transition: all 0.3s ease;
+    cursor: default;
+    display: inline-block;
+}
+
+.skill-tag:hover {
+    background: #6b2bf5;
+    color: #0f172a;
+    transform: scale(1.05);
+}
+
+/* Filter button active state */
+.filter-btn.active {
+    background-color: #6b2bf5;
+    color: white;
+    border-color: #6b2bf5;
+}
+
+/* Project card hidden state */
+.project-card.hidden {
+    display: none;
+}
+
+/* Fade in animation classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #6b2bf5;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #69d2e7;
+}
+
+/* Focus visible */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #6b2bf5;
+    outline-offset: 2px;
+}
+
+/* Certificações - ajuste suave */
+#certificacoes .grid > div {
+    position: relative;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#certificacoes .grid > div:hover {
+    z-index: 10;
+    transform: translateX(6px) translateY(-2px);
+    box-shadow: 0 8px 25px rgba(107, 43, 245, 0.15);
+}
+
+
+/* ============================================
+   PERFORMANCE & OPTIMIZATIONS
+   ============================================ */
+
+/* GPU Acceleration para elementos animados */
+.will-change-transform {
+    will-change: transform;
+}
+
+/* Containment para isolar renderização */
+section {
+    contain: layout style paint;
+}
+
+/* Reduz repaints nos cards */
+.project-card,
+.skill-category,
+.testimonial-card,
+.cert-card {
+    contain: layout style;
+}
+
+/* Content-visibility para seções abaixo da dobra */
+#experiencia,
+#habilidades,
+#depoimentos,
+#blog,
+#certificacoes,
+#contato {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+}
+
+/* Otimização de fontes */
+@font-face {
+    font-family: 'Inter';
+    font-display: swap;
+    src: local('Inter');
+}
+
+/* Prefers-reduced-motion já existe, reforçar */
+@media (prefers-reduced-motion: reduce) {
+    .animate-float,
+    .animate-pulse-slow,
+    .animate-slide {
+        animation: none !important;
+    }
+    
+    .fade-in {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
+
+/* Cache de imagens e recursos */
+img, svg {
+    content-visibility: auto;
+}
+
+/* Evita layout shift nos botões */
+button, .btn {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
