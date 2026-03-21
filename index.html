@@ -105,6 +105,7 @@
 
   <body class="bg-primary text-white font-sans overflow-x-hidden antialiased">
     <!-- Background Effects (otimizado) -->
+
     <div
       class="fixed inset-0 z-0 pointer-events-none bg-[linear-gradient(rgba(5,139,248,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(163,4,236,0.03)_1px,transparent_1px)] bg-[size:50px_50px] will-change-transform"
     ></div>
@@ -127,7 +128,7 @@
         </a> -->
 
         <!-- logotipo dgdev -->
-        <div class="flex items-center">
+        <!-- <div class="flex items-center">
           <a href="#sobre">
             <img
               src="/assets/dgdev.png"
@@ -135,7 +136,65 @@
               alt="logodgdev"
             />
           </a>
-        </div>
+        </div> -->
+
+        <!-- Logotipo DGDev -->
+        <!-- Logotipo DGDev com Gradiente -->
+        <a
+          href="#sobre"
+          class="flex items-center group transition-transform hover:scale-105"
+        >
+          <svg
+            class="h-5 md:h-6 lg:h-6 w-auto"
+            viewBox="0 0 190 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <defs>
+              <linearGradient
+                id="dg-gradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+              >
+                <stop
+                  offset="0%"
+                  style="stop-color: #69d2e7; stop-opacity: 1"
+                />
+                <stop
+                  offset="100%"
+                  style="stop-color: #6b2bf5; stop-opacity: 1"
+                />
+              </linearGradient>
+            </defs>
+            <!-- Todo o texto agora usa o gradiente definido acima -->
+            <text
+              x="0"
+              y="30"
+              fill="url(#dg-gradient )"
+              style="font-family: monospace; font-weight: bold; font-size: 36px"
+            >
+              &gt;
+            </text>
+            <text
+              x="22"
+              y="30"
+              fill="url(#dg-gradient)"
+              style="font-family: monospace; font-weight: bold; font-size: 36px"
+            >
+              _
+            </text>
+            <text
+              x="44"
+              y="30"
+              fill="url(#dg-gradient)"
+              style="font-family: monospace; font-weight: bold; font-size: 36px"
+            >
+              {DGDev}
+            </text>
+          </svg>
+        </a>
 
         <ul class="hidden md:flex items-center gap-8 text-sm list-none">
           <li>
@@ -283,16 +342,16 @@
           class="fade-in opacity-0 translate-y-8 transition-all duration-700"
         >
           <div class="flex items-center gap-2 text-text-muted mb-4">
-            <i data-lucide="terminal" class="w-5 h-5"></i>
-            <span class="text-lg font-medium"
-              >Desenvolvimento de Softwares & Análise de Dados</span
-            >
+            <!-- <i data-lucide="terminal" class="w-5 h-5"></i> -->
+            <span class="text-lg font-medium"> Programador Web </span>
           </div>
 
           <h1
-            class="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 font-display bg-gradient-to-r from-white to-accent-light bg-clip-text text-transparent leading-tight"
+            class="text-5xl md:text-6xl lg:text-7xl font-semibold mb-6 font-sans text-[#69d2e7] leading-tight tracking-tight inline-flex items-center gap-2"
           >
-            David<br />Gilmour
+            David Gilmour<span
+              class="w-4 h-12 md:h-16 bg-[#69d2e7] animate-pulse"
+            ></span>
           </h1>
 
           <p class="text-text-muted text-lg mb-8 max-w-md leading-relaxed">
@@ -372,7 +431,57 @@
             <div
               class="w-56 h-56 md:w-72 md:h-72 rounded-full bg-gradient-to-br from-accent to-cyan-400 flex items-center justify-center text-6xl md:text-7xl font-bold text-primary font-display border-4 border-primary relative z-10 animate-float will-change-transform"
             >
-              DG
+              <!-- Logotipo DGDev -->
+              <a
+                href="#habilidades"
+                class="flex items-center group transition-transform hover:scale-105"
+              >
+                <svg
+                  class="h-7 md:h-8 lg:h-9 w-auto"
+                  viewBox="0 0 190 36"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <!-- Prompt >_ em Azul Ciano (#69d2e7 ) -->
+                  <text
+                    x="0"
+                    y="30"
+                    fill="#0f172a"
+                    style="
+                      font-family: monospace;
+                      font-weight: bold;
+                      font-size: 36px;
+                    "
+                  >
+                    &gt;
+                  </text>
+                  <text
+                    x="22"
+                    y="30"
+                    fill="#69d2e7"
+                    style="
+                      font-family: monospace;
+                      font-weight: bold;
+                      font-size: 36px;
+                    "
+                  >
+                    _
+                  </text>
+                  <!-- Nome {DGDev} em Roxo (#6b2bf5) -->
+                  <text
+                    x="44"
+                    y="30"
+                    fill="#0f172a"
+                    style="
+                      font-family: monospace;
+                      font-weight: bold;
+                      font-size: 36px;
+                    "
+                  >
+                    {DGDev}
+                  </text>
+                </svg>
+              </a>
             </div>
 
             <div
@@ -456,7 +565,7 @@
             loading="lazy"
           >
             <div
-              class="h-48 bg-gradient-to-br from-accent to-blue-500 flex items-center justify-center relative overflow-hidden"
+              class="h-36 bg-gradient-to-br from-accent to-blue-500 flex items-center justify-center relative overflow-hidden"
             >
               <div
                 class="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(255,255,255,0.1)_10px,rgba(255,255,255,0.1)_20px)] animate-slide"
@@ -513,7 +622,7 @@
             data-category="sistemas automation"
           >
             <div
-              class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center relative overflow-hidden"
+              class="h-36 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center relative overflow-hidden"
             >
               <div
                 class="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(255,255,255,0.1)_10px,rgba(255,255,255,0.1)_20px)] animate-slide"
@@ -562,7 +671,7 @@
             data-category="logistica dados"
           >
             <div
-              class="h-48 bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center relative overflow-hidden"
+              class="h-36 bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center relative overflow-hidden"
             >
               <div
                 class="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(255,255,255,0.1)_10px,rgba(255,255,255,0.1)_20px)] animate-slide"
@@ -615,7 +724,7 @@
             data-category="automation"
           >
             <div
-              class="h-48 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center relative overflow-hidden"
+              class="h-36 bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center relative overflow-hidden"
             >
               <div
                 class="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(255,255,255,0.1)_10px,rgba(255,255,255,0.1)_20px)] animate-slide"
@@ -668,7 +777,7 @@
             data-category="sistemas"
           >
             <div
-              class="h-48 bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center relative overflow-hidden"
+              class="h-36 bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center relative overflow-hidden"
             >
               <div
                 class="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(255,255,255,0.1)_10px,rgba(255,255,255,0.1)_20px)] animate-slide"
@@ -717,7 +826,7 @@
             data-category="dados"
           >
             <div
-              class="h-48 bg-gradient-to-br from-indigo-900 to-purple-600 flex items-center justify-center relative overflow-hidden"
+              class="h-36 bg-gradient-to-br from-indigo-900 to-purple-600 flex items-center justify-center relative overflow-hidden"
             >
               <div
                 class="absolute inset-0 bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,rgba(255,255,255,0.1)_10px,rgba(255,255,255,0.1)_20px)] animate-slide"
@@ -790,7 +899,7 @@
           </h2>
           <div class="w-16 h-1 bg-accent mx-auto rounded-full"></div>
           <p class="text-text-muted mt-4">
-            Trajetória sólida em análise de dados e análise e desenvolvimento de
+            Trajetória sólida em análise de dados e implantação e desenvolvimento de
             sistemas
           </p>
         </div>
@@ -824,15 +933,15 @@
               <ul class="text-text-muted text-sm space-y-2 list-none">
                 <li class="flex items-start gap-2">
                   <span class="text-accent mt-1">▸</span
-                  ><span>Análise de Dados e AppSheets Integrados</span>
+                  ><span>Análise e Gestão de dados e appsheets integrados</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-accent mt-1">▸</span
-                  ><span>Monitoramento de Processos e Sistemas</span>
+                  ><span>Monitoramento de processos e informações</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-accent mt-1">▸</span
-                  ><span>Suporte Técnico Especializado ao cliente</span>
+                  ><span>Suporte técnico especializado ao cliente</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-accent mt-1">▸</span
@@ -866,11 +975,11 @@
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-accent mt-1">▸</span
-                  ><span>Reposição de mercadorias</span>
+                  ><span>Controle de produtos e reposição</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-accent mt-1">▸</span
-                  ><span>Auxiliar de depósito</span>
+                  ><span>Recebimento e estocagem de mercadorias</span>
                 </li>
               </ul>
             </div>
@@ -910,11 +1019,15 @@
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-accent mt-1">▸</span
-                  ><span>Controle de Mercadorias</span>
+                  ><span>Controle de mercadorias</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-accent mt-1">▸</span
                   ><span>Atendimento ao cliente</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-accent mt-1">▸</span
+                  ><span>Recebimento e estocagem de produtos</span>
                 </li>
               </ul>
             </div>
@@ -942,7 +1055,7 @@
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-accent mt-1">▸</span
-                  ><span>Analista de Controle Operacional</span>
+                  ><span>Analista de controle operacional</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-accent mt-1">▸</span
@@ -950,7 +1063,7 @@
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-accent mt-1">▸</span
-                  ><span>Auxiliar de Supervisão e Coordenação</span>
+                  ><span>Auxiliar de supervisão e coordenação</span>
                 </li>
               </ul>
             </div>
@@ -989,7 +1102,15 @@
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-accent mt-1">▸</span
+                  ><span>Fechamento do sistema</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-accent mt-1">▸</span
                   ><span>Auxiliar administrativo</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-accent mt-1">▸</span
+                  ><span>Treinamento de estagiários</span>
                 </li>
                 <li class="flex items-start gap-2">
                   <span class="text-accent mt-1">▸</span
